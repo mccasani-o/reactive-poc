@@ -1,0 +1,9 @@
+#spring.application.name=reactive-poc
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password: password
+  sql:
+    init:
+      mode: always
