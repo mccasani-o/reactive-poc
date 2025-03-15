@@ -36,7 +36,7 @@ class AuthControllerTest {
         LoginResponse expectedResponse = LoginResponse.builder().jwt("eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2FyaW8iLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNzQyNDAwMjg3fQ.bEZuA5wDvLEST-VXWzMZejX1pkjc46oTMPaoYHqoB761TANEYyR6i0LNe65zVQdkQraBHbzj7orQfvT7Y8CE4A").build();
 
         when(authService.login(any(LoginRequest.class))).thenReturn(Mono.just(expectedResponse));
-        
+
         webTestClient.post()
                 .uri("/api/auth/login")
                 .contentType(MediaType.APPLICATION_JSON)
