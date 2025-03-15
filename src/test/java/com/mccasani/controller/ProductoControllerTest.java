@@ -26,11 +26,11 @@ class ProductoControllerTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectStatus().isOk()
-                .expectBody(String.class) // ✅ Cambiado a `expectBody(String.class)`
+                .expectBody(String.class)
                 .consumeWith(response -> {
                     String resp = response.getResponseBody();
                     Assertions.assertNotNull(resp);
-                    Assertions.assertEquals("OK", resp); // ✅ Verifica que el contenido sea "OK"
+                    Assertions.assertEquals("OK", resp);
                 });
     }
 
