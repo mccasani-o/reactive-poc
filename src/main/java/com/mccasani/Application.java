@@ -15,18 +15,18 @@ import java.util.Base64;
 
 @Slf4j
 @SpringBootApplication
-public class ReactivePocApplication implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
 	private final UsuarioRepository usuarioRepository;
 	private final PasswordEncoder passwordEncoder;
 
-    public ReactivePocApplication(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
+    public Application(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
         this.usuarioRepository = usuarioRepository;
         this.passwordEncoder = passwordEncoder;
     }
 
     public static void main(String[] args) {
-		SpringApplication.run(ReactivePocApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 	@Override
